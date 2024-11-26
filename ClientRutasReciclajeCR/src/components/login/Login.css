@@ -1,0 +1,195 @@
+/* General styles for the login page */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Eliminates both vertical and horizontal scroll */
+  }
+  
+  /* Wrapper for the login form */
+  .sign-in__wrapper {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /* Add fade-in animation */
+  }
+  
+  /* Backdrop to overlay the background image */
+  .sign-in__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+  
+  /* Styles for the login form */
+  form {
+    position: relative;
+    z-index: 2;
+    width: 400px;
+    max-width: 90%;
+    animation: dropIn 1.5s ease-in-out; /* Add drop-in animation */
+  }
+  
+  /* Form elements */
+  .shadow {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .p-4 {
+    padding: 1.5rem;
+  }
+  
+  .rounded {
+    border-radius: 8px;
+  }
+  
+  /* Image logo */
+  .img-thumbnail {
+    border: none;
+    max-width: 120px;
+    background: transparent;
+  }
+  
+  /* Header text in the form */
+  .h4 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Alert message */
+  .alert {
+    border-radius: 8px;
+  }
+  
+  /* Form input fields and buttons */
+  .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .btn-link {
+    font-size: 0.9rem;
+  }
+  
+  /* Footer text */
+  .position-absolute {
+    position: absolute;
+  }
+  
+  .bottom-0 {
+    bottom: 0;
+  }
+  
+  .start-50 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  .d-grid {
+    display: grid;
+  }
+  
+  /* Utilities */
+  .w-100 {
+    width: 100%;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .me-auto {
+    margin-right: auto;
+  }
+  
+  .d-block {
+    display: block;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .bg-body-tertiary {
+    background-color: #f8f9fa;
+  }
+  
+  /* Responsive styles for smaller devices */
+  @media (max-width: 768px) {
+    form {
+      width: 90%;
+    }
+  
+    .h4 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .btn-primary {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Keyframes for animations */
+  
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes dropIn {
+    0% { transform: translateY(-200px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
