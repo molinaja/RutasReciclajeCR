@@ -6,6 +6,7 @@ import { Home } from '../../pages/home/Home'
 import { About } from '../../pages/about/About'
 import { Contact } from '../../pages/contact/Contact'
 import { Login } from '../login/Login';
+import PrivateRoute from '../../routes/PrivateRoute';
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,6 +29,7 @@ export const NavbarComponent = () => {
                 <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>
                 <Nav.Link as={Link} to="/about">Informacion</Nav.Link>
                 <Nav.Link as={Link} to="/login">Identificarse</Nav.Link>
+                <Nav.Link as={Link} to="/account">Cuenta Info</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -39,7 +41,7 @@ export const NavbarComponent = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
-
+            <Route path="/account" element={<PrivateRoute />}/>
           </Routes>
         </div>
       </Router>
