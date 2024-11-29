@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AuthState {
   token: string | null;
@@ -13,25 +13,26 @@ const initialState: AuthState = {
 };
 
 const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<{ token: string; userName: string }>) => {
+    login: (
+      state,
+      action: PayloadAction<{ token: string; userName: string }>
+    ) => {
       state.token = action.payload.token;
       state.userName = action.payload.userName;
       state.isAuthenticated = true;
-      // Almacenar el token en localStorage
-      localStorage.setItem('jwt', action.payload.token);
+      localStorage.setItem("jwt", action.payload.token);
     },
     logout: (state) => {
       state.token = null;
       state.userName = null;
       state.isAuthenticated = false;
-      // Remover el token del localStorage
-      localStorage.removeItem('jwt');
+      localStorage.removeItem("jwt");
     },
     loadUserFromStorage: (state) => {
-      const token = localStorage.getItem('jwt');
+      const token = localStorage.getItem("jwt");
       if (token) {
         state.token = token;
         state.isAuthenticated = true;
