@@ -20,7 +20,7 @@ interface LoginDtoResponse {
 export function useLogin(): UseMutationResult<LoginDtoResponse, AxiosError, LoginDtoRequest> {
   return useMutation<LoginDtoResponse, AxiosError, LoginDtoRequest>({
     mutationFn: async (data: LoginDtoRequest) => {
-      const response = await apiInstancia.post<LoginDtoResponse>('/Users/Login', data);
+      const response = await apiInstancia.post<LoginDtoResponse>('Users/Login', data);
       return response.data;
     },
     onError: (error: AxiosError) => {
@@ -36,4 +36,4 @@ export function useLogin(): UseMutationResult<LoginDtoResponse, AxiosError, Logi
       }
     },
   });
-}
+} 
